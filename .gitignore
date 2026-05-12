@@ -14,4 +14,4 @@ instance/
 .idea/
 
 dist/
-build/
+build/.venv/
