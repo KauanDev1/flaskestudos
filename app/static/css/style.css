@@ -1,0 +1,13 @@
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+}

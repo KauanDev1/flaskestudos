@@ -3,37 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Contato</title>
 </head>
 <body>
-    <div>
-        <h3>Formulario GET</h3>
-        <form action="" method="get">
-            <input type="text" name="pesquisa">
-            <button type="submit">Enviar</button>
-        </form>
-        <br><br>
-        {{ pesquisa }}
-        
-    </div>
-    <br><br>
-    <div>
-        <h3>Formulario POST</h3>
+    <div class="Formulario">
+        <h3>Envio de contato</h3>
 
-        <form method="post">
-            <h5>Nome</h5>
-            <input type="text" name="Nome">
+        <form method="post" class="formulario">
+            {{ form.csrf_token }}
 
-            <h5>Email</h5>
-            <input type="text" name="Email">
+            <div class="campo">
+                {{ form.nome.label() }}
+                {{ form.nome() }}
+            </div>
 
-            <h5>Assunto</h5>
-            <input type="text" name="Assunto">
+            <div class="campo">
+                {{ form.email.label() }}
+                {{ form.email() }}
+            </div>
 
-            <h5>Mensagem</h5>
-            <input type="text" name="Mensagem">
+            <div class="campo">
+                {{ form.assunto.label() }}
+                {{ form.assunto() }}
+            </div>
 
-            <button type="submit">Enviar</button>
+            <div class="campo">
+                {{ form.mensagem.label() }}
+                {{ form.mensagem() }}
+            </div>
+
+
+            <div class="campo">
+                {{ form.btnSubmit() }}
+            </div>
         </form>
 
     </div>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+</head>
+<body>
+    <div>
+        <h3>Formulario GET</h3>
+        <form action="" method="get">
+            <input type="text" name="pesquisa">
+            <button type="submit">Enviar</button>
+        </form>
+        <br><br>
+        {{ pesquisa }}
+        
+    </div>
+    <br><br>
+    <div>
+        <h3>Formulario POST</h3>
+
+        <form method="post">
+            <p>Nome</p>
+            <input type="text" name="nome" required>
+
+            <p>EMail</p>
+            <input type="text" name="email" required>
+
+            <p>Assunto</p>
+            <input type="text" name="assunto">
+
+            <p>Mensagem</p>
+            <input type="text" name="mensagem" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+    </div>
+</body>
+</html>
